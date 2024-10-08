@@ -1,5 +1,5 @@
 1) Заходим в любую удобную папку куда хотим скопировать проект.
-2) git clone https://github.com/Pro100kir2/RCS # копируем все файлы на ваше устройство
+2) `git clone https://github.com/Pro100kir2/RCS` # копируем все файлы на ваше устройство
 3) скачиваем Docker из люого удобного источника : 
  На винду : https://docs.docker.com/desktop/install/windows-install/
  После чего установите git : https://git-scm.com/
