@@ -1,6 +1,6 @@
 1) Открываем терминал
 2) `ls` #  вводим чтобы посмотреть доступные папки
-3) `cd $your_directory_name` # Заходим в папку куда хотим скачать проект 
+3) `cd $your_directory_name` # Заходим в папку куда хотим скачать проект (заменить $your_directory_name на вашу папку)
 4) `git clone https://github.com/Pro100kir2/RCS` # используем данную команду для копирования всех файлов на ваше устройство
 5) скачиваем Docker из любого удобного источника : 
  На винду : https://docs.docker.com/desktop/install/windows-install/
