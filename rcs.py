@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 import sys
+import time
 from art import *
+from tqdm import tqdm
+
+def loading_animation(message):
+    """Функция для отображения анимации загрузки"""
+    print(message)
+    for i in tqdm(range(100), desc="Processing", leave=True):
+        if i < 100 :
+            time.sleep(0.02)  # Задержка для имитации загрузки
 
 def connect_to_router(hostname, username, password):
     """Функция для подключения к роутеру через SSH"""
@@ -85,6 +94,9 @@ def vpn_control(client):
             print("Неверный выбор. Попробуйте снова.")
 
 def main():
+    # Показать загрузку один раз при запуске программы
+    loading_animation("Запуск программы RCS...")
+
     # Отобразить ASCII арт
     rcs = text2art("RCS", font='block', chr_ignore=True)
     print(rcs)
@@ -98,6 +110,10 @@ def main():
     while attempt < max_attempts:
         hostname = input("Введите IP адрес роутера: ")
         password = input("Введите пароль: ")
+
+        # Показать загрузку только перед первой попыткой подключения
+        if attempt == 0:
+            loading_animation("Подключение к роутеру...")
 
         client = connect_to_router(hostname, username, password)
         if client:
@@ -141,4 +157,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
